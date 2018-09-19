@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         user_password = findViewById(R.id.TV_password);
         btn_login = findViewById(R.id.BTN_Login);
         error_massage = findViewById(R.id.TV_error_login);
-
         error_massage.setVisibility(View.INVISIBLE);
+
 
         final Intent dashboard  = new Intent(this , Dashboard.class);
 
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(user_name.getText().toString().equals("admin") && user_password.getText().toString().equals("password"))
                 {
+                    error_massage.setVisibility(View.INVISIBLE);
                     startActivity(dashboard);
                 }
                 else
